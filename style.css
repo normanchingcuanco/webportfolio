@@ -41,7 +41,7 @@ section {
   background-color: #080808;
   display: flex;
   align-items: center;
-  padding-top: 90px; /* offset for fixed navbar */
+  padding-top: 90px; /* fixed navbar offset */
 }
 
 #landing h1,
@@ -59,7 +59,7 @@ section {
 }
 
 /* ===============================
-   LANDING IMAGE (LOCKED & RESPONSIVE)
+   LANDING IMAGE (DESKTOP + BASE)
 ================================ */
 .image-wrapper {
   position: relative;
@@ -76,9 +76,10 @@ section {
   object-fit: cover;
   position: relative;
   z-index: 2;
+  margin: 0 auto;
 }
 
-/* Ellipse background */
+/* Ellipse behind image */
 .ellipse {
   position: absolute;
   width: 280px;
@@ -92,7 +93,7 @@ section {
 }
 
 /* ===============================
-   MOBILE OPTIMIZATION
+   MOBILE FIXES (CRITICAL)
 ================================ */
 @media (max-width: 767px) {
   #landing {
@@ -100,8 +101,17 @@ section {
     text-align: center;
   }
 
+  /* Remove Bootstrap column padding that shifts image */
+  #landing .col-md-6 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* Force true centering */
   .image-wrapper {
     max-width: 240px;
+    margin-left: auto !important;
+    margin-right: auto !important;
   }
 
   .ellipse {
@@ -140,7 +150,7 @@ section {
   font-size: 11px;
 }
 
-/* Reduce spacing between project rows */
+/* Reduce spacing between rows */
 #projects .row {
   margin-bottom: 2rem;
 }
@@ -149,7 +159,7 @@ section {
   margin-bottom: 0;
 }
 
-/* Mobile adjustments */
+/* Mobile project tweaks */
 @media (max-width: 767px) {
   #projects img {
     max-width: 100%;
@@ -162,11 +172,6 @@ section {
   #projects p {
     font-size: 12px;
   }
-}
-
-/* Short Courses text */
-.short-course-text {
-  font-size: 13px;
 }
 
 /* ===============================
@@ -187,7 +192,6 @@ section {
   opacity: 0.9;
 }
 
-/* Tool icons */
 .tool-icon {
   width: 80px;
   height: 80px;
