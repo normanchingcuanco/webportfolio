@@ -168,6 +168,11 @@
   gap: 1rem; /* less gap between image and text */
 }
 
+/* Short Courses Capstone Text */
+.short-course-text {
+  font-size: 13px;
+}
+
 /* Mobile adjustments */
 @media (max-width: 767px) {
   #projects img {
