@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Developer Portfolio</title>
+
+  <!-- Mobile Responsive Meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+
+  <!-- Google Font -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#landing">MyPortfolio</a>
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navlinks"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navlinks">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#landing">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">My Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#tools">Tools</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- LANDING SECTION -->
+  <section id="landing" class="min-vh-100 d-flex align-items-center">
+    <div class="container">
+      <div class="row align-items-center justify-content-center g-3">
+
+        <!-- TEXT -->
+        <div class="col-12 col-md-5">
+          <h1 class="fw-bold">Norman Chingcuanco</h1>
+          <h2 class="text-secondary mb-3">Full Stack Web Developer</h2>
+          <p class="lead">I build responsive and user-focused web applications.</p>
+          <a href="#projects" class="btn btn-primary mt-3">View My Projects</a>
+        </div>
+
+        <!-- IMAGE -->
+        <div class="col-12 col-md-5 text-center position-relative">
+          <div class="image-wrapper">
+            <div class="ellipse"></div>
+            <img
+              src="./images/norman2.jpg"
+              alt="Norman Chingcuanco"
+              class="landing-image"
+            >
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS SECTION -->
+  <section id="projects" class="py-5">
+    <div class="container">
+
+      <h2 class="text-center mb-5">My Projects</h2>
+
+      <!-- Project 1 -->
+      <div class="row align-items-center mb-4">
+        <div class="col-12 col-md-6">
+          <img src="./images/project1-ecommerce-api.png" class="img-fluid rounded mb-3 mb-md-0" alt="E-commerce API Documentation">
+        </div>
+        <div class="col-12 col-md-6">
+          <h5>E-commerce API Documentation</h5>
+          <p>
+            Dynamic e-commerce workflow management system featuring routes for order processing,
+            real-time inventory updates, and secure user authentication. Supports automated order
+            reporting and comprehensive product management. Backend API is publicly documented
+            using Postman.
+          </p>
+          <span class="text-muted">Coming Soon</span>
+        </div>
+      </div>
+
+      <!-- Project 2 (alternating) -->
+      <div class="row align-items-center mb-4 flex-md-row-reverse">
+        <div class="col-12 col-md-6">
+          <img src="./images/project2-course-api.png" class="img-fluid rounded mb-3 mb-md-0" alt="Course Booking API Documentation">
+        </div>
+        <div class="col-12 col-md-6">
+          <h5>Course Booking API Documentation</h5>
+          <p>
+            RESTful API for managing course enrollments, featuring user registration,
+            authentication, and retrieval of user details. Supports course creation, updates,
+            archiving, activation, and student enrollment. Publicly documented using Postman.
+          </p>
+          <span class="text-muted">Coming Soon</span>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="row align-items-center mb-4">
+        <div class="col-12 col-md-6">
+          <img src="./images/project3-course.png" class="img-fluid rounded mb-3 mb-md-0" alt="Course Booking Application">
+        </div>
+        <div class="col-12 col-md-6">
+          <h5>Course Booking App</h5>
+          <p>
+            MERN stack course enrollment system featuring user registration, authentication,
+            and profile management. Authenticated users can manage courses while students
+            browse and enroll seamlessly.
+          </p>
+          <span class="text-muted">Coming Soon</span>
+        </div>
+      </div>
+
+      <!-- Project 4 (alternating) -->
+      <div class="row align-items-center mb-4 flex-md-row-reverse">
+        <div class="col-12 col-md-6">
+          <img src="./images/project4-ecommerce.png" class="img-fluid rounded mb-3 mb-md-0" alt="E-commerce Web Application">
+        </div>
+        <div class="col-12 col-md-6">
+          <h5>E-commerce App</h5>
+          <p>
+            MERN e-commerce platform featuring a dynamic product catalog, real-time search,
+            secure checkout, and an admin dashboard with analytics and user management.
+          </p>
+          <span class="text-muted">Coming Soon</span>
+        </div>
+      </div>
+
+      <!-- Project 5 -->
+      <div class="row align-items-center mb-4">
+        <div class="col-12 col-md-6">
+          <img src="./images/project5-airline-booking.png" class="img-fluid rounded mb-3 mb-md-0" alt="Airline Booking System Mockup">
+        </div>
+        <div class="col-12 col-md-6">
+          <h5>Airline Booking System Mockup</h5>
+          <p>
+            Side project showcasing an intuitive UI for flight search, seat selection,
+            and booking confirmation.
+          </p>
+          <span class="text-muted">Coming Soon</span>
+        </div>
+      </div>
+
+      <!-- Project 6 (alternating) -->
+      <div class="row align-items-center mb-4 flex-md-row-reverse">
+        <div class="col-12 col-md-6">
+          <img src="./images/project6-airline-prototype.png" class="img-fluid rounded mb-3 mb-md-0" alt="Airline Booking System Prototype">
+        </div>
+        <div class="col-12 col-md-6">
+          <h5>Airline Booking System Prototype</h5>
+          <p>
+            Interactive prototype simulating end-to-end airline booking including
+            reservations, payments, and ticket management.
+          </p>
+          <span class="text-muted">Coming Soon</span>
+        </div>
+      </div>
+
+      <!-- Short Courses Capstone (compact layout) -->
+      <div class="col-12 mt-5">
+        <h3 class="text-center mb-4">Short Courses Capstone</h3>
+        <div class="row justify-content-center g-4">
+          <div class="col-12 col-md-4 d-flex flex-column align-items-center">
+            <img src="./images/online-learning.png" class="img-fluid mb-2" alt="Short Courses">
+            <p class="text-center mb-0" style="font-size: 13px;">Placeholder for your Short Courses capstone project.</p>
+          </div>
+
+          <div class="col-12 col-md-4 d-flex flex-column align-items-center">
+            <img src="./images/graduation.png" class="img-fluid mb-2" alt="Short Courses">
+            <p class="text-center mb-0" style="font-size: 13px;">Placeholder for your Short Courses capstone project.</p>
+          </div>
+
+          <div class="col-12 col-md-4 d-flex flex-column align-items-center">
+            <img src="./images/education.png" class="img-fluid mb-2" alt="Short Courses">
+            <p class="text-center mb-0" style="font-size: 13px;">Placeholder for your Short Courses capstone project.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ <!-- TOOLS SECTION -->
+ <section id="tools" class="py-5">
+   <div class="container">
+     <h2 class="text-center mb-5">Tools</h2>
+
+     <div class="row g-5">
+
+       <!-- FRONT END -->
+       <div class="col-12 col-md-4 text-center">
+         <h4 class="mb-4">Front End</h4>
+         <div class="row g-3 justify-content-center">
+           <div class="col-6">
+             <img src="./images/html.png" alt="HTML" class="img-fluid tool-icon">
+             <p class="mt-2">HTML</p>
+           </div>
+           <div class="col-6">
+             <img src="./images/css-3.png" alt="CSS" class="img-fluid tool-icon">
+             <p class="mt-2">CSS</p>
+           </div>
+           <div class="col-6">
+             <img src="./images/bootstrap.png" alt="Bootstrap" class="img-fluid tool-icon">
+             <p class="mt-2">Bootstrap</p>
+           </div>
+           <div class="col-6">
+             <img src="./images/js.png" alt="JavaScript" class="img-fluid tool-icon">
+             <p class="mt-2">JavaScript</p>
+           </div>
+         </div>
+       </div>
+
+       <!-- MERN STACK -->
+       <div class="col-12 col-md-4 text-center">
+         <h4 class="mb-4">MERN Stack</h4>
+         <div class="row g-3 justify-content-center">
+           <div class="col-6">
+             <img src="./images/mongodb.png" alt="MongoDB" class="img-fluid tool-icon invert">
+             <p class="mt-2">MongoDB</p>
+           </div>
+           <div class="col-6">
+             <img src="./images/nodejs.png" alt="Node.js" class="img-fluid tool-icon">
+             <p class="mt-2">Node.js</p>
+           </div>
+           <div class="col-6">
+             <img src="./images/react.png" alt="React JS" class="img-fluid tool-icon">
+             <p class="mt-2">React</p>
+           </div>
+           <div class="col-6">
+             <img src="./images/express-js.png" alt="Express JS" class="img-fluid tool-icon invert">
+             <p class="mt-2">Express</p>
+           </div>
+         </div>
+       </div>
+
+       <!-- OTHER TOOLS -->
+       <div class="col-12 col-md-4 text-center">
+         <h4 class="mb-4">Other Tools</h4>
+         <div class="row g-3 justify-content-center">
+           <div class="col-6">
+             <img src="./images/git.png" alt="Git" class="img-fluid tool-icon">
+             <p class="mt-2">Git</p>
+           </div>
+           <div class="col-6">
+             <img src="./images/sublimetext.png" alt="Sublime Text" class="img-fluid tool-icon">
+             <p class="mt-2">Sublime</p>
+           </div>
+           <div class="col-6">
+             <img src="./images/heroku.png" alt="Heroku" class="img-fluid tool-icon">
+             <p class="mt-2">Heroku</p>
+           </div>
+           <div class="col-6">
+             <img src="./images/postman.png" alt="Postman" class="img-fluid tool-icon">
+             <p class="mt-2">Postman</p>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+ </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Contact Me</h2>
+
+      <div class="row g-4 justify-content-center">
+        <div class="col-12 col-md-6">
+          <form>
+            <input type="text" class="form-control mb-3" placeholder="Your Name" required>
+            <input type="email" class="form-control mb-3" placeholder="Your Email" required>
+            <textarea class="form-control mb-3" rows="4" placeholder="Your Message" required></textarea>
+            <button class="btn btn-dark w-100">Send Message</button>
+          </form>
+        </div>
+
+        <div class="col-12 col-md-6">
+          <div class="ratio ratio-16x9">
+            <iframe
+              src="https://www.google.com/maps?q=Marikina%20City%20Philippines&output=embed"
+              loading="lazy"
+              title="Marikina City Map"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-dark text-white text-center py-4">
+    <p class="mb-1 fw-bold">Norman Chingcuanco</p>
+    <p class="mb-1">Full Stack Developer</p>
+    <p class="mb-0">&copy; All Rights Reserved 2026</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

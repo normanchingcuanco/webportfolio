@@ -1,0 +1,219 @@
+/* Landing Section */
+
+#landing {
+  background-color: #080808;
+  min-height: 700px;
+  display: flex;
+  align-items: center;
+}
+
+/* Max width */
+#landing .container {
+  max-width: 1280px;
+}
+
+/* Dark background */
+#landing h1,
+#landing h2,
+#landing p {
+  color: #ffffff;
+}
+
+#landing h2 {
+  opacity: 0.85;
+}
+
+#landing p {
+  opacity: 0.9;
+}
+
+/* Navbar Links */
+
+.navbar-nav .nav-link {
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: 0.01em;
+
+  color: rgba(156, 156, 156, 1);
+
+  padding-left: 18px;
+  padding-right: 18px;
+}
+
+/* Hover effect */
+.navbar-nav .nav-link:hover {
+  color: #ffffff;
+}
+
+.navbar-brand {
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+}
+
+/* Landing Image */
+
+.image-wrapper {
+  position: relative;
+  width: 416px;
+  height: 623px;
+  margin: 0 auto; /* ✅ centers inside column */
+}
+
+.landing-image {
+  position: absolute;
+
+  width: 416px;
+  height: 416px;
+  left: -33px;
+
+  border-radius: 50%;
+  object-fit: cover;
+
+  top: 50%;
+  transform: translateY(-50%); /* 🔥 THIS centers it vertically */
+
+  z-index: 2;
+}
+
+
+/* Ellipse Background */
+.ellipse {
+  position: absolute;
+
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+
+  z-index: 1;
+}
+
+/* Responsiveness Adjustment */
+
+@media (max-width: 767px) {
+  .image-wrapper {
+    width: 260px;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .landing-image {
+    width: 260px;
+    height: 260px;
+    top: 0;
+    left: 0;
+  }
+
+  .ellipse {
+    width: 220px;
+    height: 220px;
+    top: 40px;
+    left: 20px;
+  }
+}
+
+/* Project Section */
+
+#projects {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+#projects .row {
+  margin-bottom: 2rem; /* smaller gap between projects */
+}
+
+#projects .row:last-child {
+  margin-bottom: 0;
+}
+
+/* Project Images */
+#projects img {
+  width: 100%;
+  max-width: 300px;   /* reduce size */
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+/* Project Text */
+#projects h5 {
+  font-size: 16px;
+  margin-bottom: 0.5rem;
+}
+
+#projects p {
+  font-size: 13px;
+  line-height: 1.4;
+  margin-bottom: 0.5rem;
+}
+
+#projects span {
+  font-size: 11px;
+  padding: 3px 8px;
+}
+
+/* Row adjustments for alternating layout */
+#projects .row.align-items-center {
+  gap: 1rem; /* less gap between image and text */
+}
+
+/* Mobile adjustments */
+@media (max-width: 767px) {
+  #projects img {
+    max-width: 100%;
+    margin-bottom: 0.75rem;
+  }
+
+  #projects h5 {
+    font-size: 15px;
+  }
+
+  #projects p {
+    font-size: 12px;
+  }
+}
+
+/* Tools Section Icons */
+#tools .tool-icon {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin: 0 auto;
+  display: block;
+}
+
+/* Tools Section */
+#tools {
+  background-color: #080808; /* same as landing */
+}
+
+#tools h2,
+#tools h4,
+#tools p {
+  color: #ffffff;
+}
+
+#tools p {
+  opacity: 0.9;
+}
+
+/* Fix dark logos on dark background */
+#tools .invert {
+  filter: invert(1);
+}
+
+/* Tools Section Spacing */
+#tools {
+  padding-bottom: 160px; /* pushes Contact section down */
+}
