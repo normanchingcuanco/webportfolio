@@ -1,10 +1,11 @@
 /* ===============================
    GLOBAL OVERFLOW FIX
 ================================ */
-html, body {
+html,
+body {
   width: 100%;
-  overflow-x: hidden;
   margin: 0;
+  overflow-x: hidden;
 }
 
 /* ===============================
@@ -15,9 +16,9 @@ body {
   background-color: #ffffff;
 }
 
-/* Prevent anchor overlap */
+/* Prevent anchor overlap with fixed navbar */
 section {
-  scroll-margin-top: 80px;
+  scroll-margin-top: 100px;
 }
 
 /* ===============================
@@ -48,18 +49,18 @@ section {
 }
 
 /* ===============================
-   LANDING SECTION (FINAL FIX)
+   LANDING SECTION (NO GAP FIX)
 ================================ */
 #landing {
   background-color: #080808;
   min-height: 100vh;
-  padding-top: 70px; /* navbar offset MOVED HERE */
+  padding-top: 70px; /* desktop navbar height */
   display: flex;
   align-items: center;
   overflow: hidden;
 }
 
-/* Text colors */
+/* Landing text */
 #landing h1,
 #landing h2,
 #landing p {
@@ -109,11 +110,11 @@ section {
 }
 
 /* ===============================
-   LANDING MOBILE
+   LANDING MOBILE FIX
 ================================ */
 @media (max-width: 767px) {
   #landing {
-    padding-top: 90px;
+    padding-top: 96px; /* mobile navbar height */
     text-align: center;
   }
 
@@ -185,6 +186,11 @@ section {
   }
 }
 
+/* Short Courses Capstone */
+.short-course-text {
+  font-size: 13px;
+}
+
 /* ===============================
    TOOLS SECTION
 ================================ */
@@ -197,6 +203,10 @@ section {
 #tools h4,
 #tools p {
   color: #ffffff;
+}
+
+#tools p {
+  opacity: 0.9;
 }
 
 .tool-icon {
