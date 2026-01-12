@@ -1,4 +1,12 @@
 /* ===============================
+   GLOBAL OVERFLOW FIX
+================================ */
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* ===============================
    GLOBAL STYLES
 ================================ */
 body {
@@ -69,6 +77,7 @@ section {
   width: 100%;
   max-width: 420px;
   margin: 0 auto;
+  overflow: hidden; /* CONTAINS ELLIPSE */
 }
 
 .landing-image {
@@ -109,11 +118,6 @@ section {
     padding-right: 0;
   }
 
-  .image-wrapper {
-    margin-left: auto !important;
-    margin-right: auto !important;
-  }
-
   .landing-image {
     max-width: 240px;
   }
@@ -131,12 +135,10 @@ section {
   padding: 80px 0;
 }
 
-/* Full-width feel per project row */
 #projects .row {
   margin-bottom: 3rem;
 }
 
-/* Images fill their column */
 #projects img {
   width: 100%;
   height: auto;
@@ -144,13 +146,11 @@ section {
   display: block;
 }
 
-/* Inner spacing for text & images */
 #projects .col-md-6 {
   padding-left: 2rem;
   padding-right: 2rem;
 }
 
-/* Typography */
 #projects h5 {
   font-size: 18px;
   margin-bottom: 0.75rem;
@@ -166,7 +166,6 @@ section {
   font-size: 12px;
 }
 
-/* Remove extra space after last project */
 #projects .row:last-of-type {
   margin-bottom: 0;
 }
@@ -180,18 +179,14 @@ section {
     padding-right: 1rem;
   }
 
-  #projects h5 {
-    font-size: 16px;
-    text-align: center;
-  }
-
+  #projects h5,
   #projects p,
   #projects span {
     text-align: center;
   }
 }
 
-/* Short Courses Capstone text */
+/* Short Courses Capstone */
 .short-course-text {
   font-size: 13px;
 }
