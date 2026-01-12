@@ -4,6 +4,7 @@
 html, body {
   width: 100%;
   overflow-x: hidden;
+  margin: 0;
 }
 
 /* ===============================
@@ -11,12 +12,10 @@ html, body {
 ================================ */
 body {
   font-family: 'IBM Plex Mono', monospace;
-  padding-top: 70px; /* offset for fixed navbar */
   background-color: #ffffff;
-  margin: 0;
 }
 
-/* Prevent navbar overlap when scrolling */
+/* Prevent anchor overlap */
 section {
   scroll-margin-top: 80px;
 }
@@ -24,6 +23,10 @@ section {
 /* ===============================
    NAVBAR
 ================================ */
+.navbar {
+  height: 70px;
+}
+
 .navbar-brand {
   font-weight: 500;
   font-size: 14px;
@@ -45,16 +48,18 @@ section {
 }
 
 /* ===============================
-   LANDING SECTION
+   LANDING SECTION (FINAL FIX)
 ================================ */
 #landing {
   background-color: #080808;
   min-height: 100vh;
+  padding-top: 70px; /* navbar offset MOVED HERE */
   display: flex;
   align-items: center;
   overflow: hidden;
 }
 
+/* Text colors */
 #landing h1,
 #landing h2,
 #landing p {
@@ -77,7 +82,6 @@ section {
   width: 100%;
   max-width: 420px;
   margin: 0 auto;
-  overflow: hidden; /* CONTAINS ELLIPSE */
 }
 
 .landing-image {
@@ -105,11 +109,11 @@ section {
 }
 
 /* ===============================
-   LANDING MOBILE FIX
+   LANDING MOBILE
 ================================ */
 @media (max-width: 767px) {
   #landing {
-    padding-top: 120px;
+    padding-top: 90px;
     text-align: center;
   }
 
@@ -159,15 +163,10 @@ section {
 #projects p {
   font-size: 14px;
   line-height: 1.6;
-  margin-bottom: 0.5rem;
 }
 
 #projects span {
   font-size: 12px;
-}
-
-#projects .row:last-of-type {
-  margin-bottom: 0;
 }
 
 /* ===============================
@@ -186,11 +185,6 @@ section {
   }
 }
 
-/* Short Courses Capstone */
-.short-course-text {
-  font-size: 13px;
-}
-
 /* ===============================
    TOOLS SECTION
 ================================ */
@@ -203,10 +197,6 @@ section {
 #tools h4,
 #tools p {
   color: #ffffff;
-}
-
-#tools p {
-  opacity: 0.9;
 }
 
 .tool-icon {
