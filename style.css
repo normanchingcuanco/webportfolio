@@ -5,6 +5,7 @@ html,
 body {
   width: 100%;
   margin: 0;
+  padding: 0;
   overflow-x: hidden;
 }
 
@@ -14,11 +15,12 @@ body {
 body {
   font-family: 'IBM Plex Mono', monospace;
   background-color: #ffffff;
+  padding-top: 70px; /* SINGLE SOURCE OF TRUTH for navbar offset */
 }
 
-/* Prevent anchor overlap with fixed navbar */
+/* Prevent anchor overlap */
 section {
-  scroll-margin-top: 100px;
+  scroll-margin-top: 80px;
 }
 
 /* ===============================
@@ -49,12 +51,11 @@ section {
 }
 
 /* ===============================
-   LANDING SECTION (NO GAP FIX)
+   LANDING SECTION (CORRECT FIX)
 ================================ */
 #landing {
   background-color: #080808;
-  min-height: 100vh;
-  padding-top: 70px; /* desktop navbar height */
+  min-height: calc(100vh - 70px); /* fills remaining viewport */
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -110,11 +111,15 @@ section {
 }
 
 /* ===============================
-   LANDING MOBILE FIX
+   LANDING MOBILE (NO GAP, NO SHRINK)
 ================================ */
 @media (max-width: 767px) {
-  #landing {
+  body {
     padding-top: 96px; /* mobile navbar height */
+  }
+
+  #landing {
+    min-height: calc(100vh - 96px);
     text-align: center;
   }
 
