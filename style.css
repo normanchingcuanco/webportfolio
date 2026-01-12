@@ -1,17 +1,14 @@
 /* ===============================
-   GLOBAL RESET
+   GLOBAL STYLES
 ================================ */
-* {
-  box-sizing: border-box;
-}
-
 body {
-  margin: 0;
   font-family: 'IBM Plex Mono', monospace;
+  padding-top: 70px; /* offset for fixed navbar */
   background-color: #ffffff;
+  margin: 0;
 }
 
-/* Offset anchor scrolling for fixed navbar */
+/* Prevent navbar overlap when scrolling */
 section {
   scroll-margin-top: 80px;
 }
@@ -20,13 +17,19 @@ section {
    NAVBAR
 ================================ */
 .navbar-brand {
+  font-weight: 500;
   font-size: 14px;
   letter-spacing: 0.04em;
+  color: #ffffff;
 }
 
 .navbar-nav .nav-link {
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0.01em;
   color: rgba(156, 156, 156, 1);
-  padding: 0 18px;
+  padding-left: 18px;
+  padding-right: 18px;
 }
 
 .navbar-nav .nav-link:hover {
@@ -37,11 +40,11 @@ section {
    LANDING SECTION
 ================================ */
 #landing {
-  min-height: 100vh;
   background-color: #080808;
+  min-height: 100vh;
   display: flex;
   align-items: center;
-  padding-top: 90px; /* fixed navbar offset */
+  overflow: hidden;
 }
 
 #landing h1,
@@ -59,31 +62,31 @@ section {
 }
 
 /* ===============================
-   LANDING IMAGE (DESKTOP + BASE)
+   LANDING IMAGE
 ================================ */
 .image-wrapper {
   position: relative;
   width: 100%;
-  max-width: 360px;
+  max-width: 420px;
   margin: 0 auto;
 }
 
 .landing-image {
-  display: block;
   width: 100%;
+  max-width: 360px;
   aspect-ratio: 1 / 1;
   border-radius: 50%;
   object-fit: cover;
+  display: block;
+  margin: 0 auto;
   position: relative;
   z-index: 2;
-  margin: 0 auto;
 }
 
-/* Ellipse behind image */
 .ellipse {
   position: absolute;
-  width: 280px;
-  height: 280px;
+  width: 300px;
+  height: 300px;
   background: rgba(255, 255, 255, 0.08);
   border-radius: 50%;
   top: 50%;
@@ -93,7 +96,7 @@ section {
 }
 
 /* ===============================
-   MOBILE FIXES (CRITICAL)
+   LANDING MOBILE FIX
 ================================ */
 @media (max-width: 767px) {
   #landing {
@@ -101,22 +104,23 @@ section {
     text-align: center;
   }
 
-  /* Remove Bootstrap column padding that shifts image */
-  #landing .col-md-6 {
+  #landing .col-md-5 {
     padding-left: 0;
     padding-right: 0;
   }
 
-  /* Force true centering */
   .image-wrapper {
-    max-width: 240px;
     margin-left: auto !important;
     margin-right: auto !important;
   }
 
+  .landing-image {
+    max-width: 240px;
+  }
+
   .ellipse {
-    width: 200px;
-    height: 200px;
+    width: 220px;
+    height: 220px;
   }
 }
 
@@ -124,54 +128,72 @@ section {
    PROJECTS SECTION
 ================================ */
 #projects {
-  padding: 60px 0;
+  padding: 80px 0;
 }
 
+/* Full-width feel per project row */
+#projects .row {
+  margin-bottom: 3rem;
+}
+
+/* Images fill their column */
 #projects img {
   width: 100%;
-  max-width: 300px;
   height: auto;
-  border-radius: 8px;
-  margin-bottom: 1rem;
+  border-radius: 12px;
+  display: block;
 }
 
+/* Inner spacing for text & images */
+#projects .col-md-6 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+/* Typography */
 #projects h5 {
-  font-size: 16px;
-  margin-bottom: 0.5rem;
+  font-size: 18px;
+  margin-bottom: 0.75rem;
 }
 
 #projects p {
-  font-size: 13px;
-  line-height: 1.4;
+  font-size: 14px;
+  line-height: 1.6;
   margin-bottom: 0.5rem;
 }
 
 #projects span {
-  font-size: 11px;
+  font-size: 12px;
 }
 
-/* Reduce spacing between rows */
-#projects .row {
-  margin-bottom: 2rem;
-}
-
-#projects .row:last-child {
+/* Remove extra space after last project */
+#projects .row:last-of-type {
   margin-bottom: 0;
 }
 
-/* Mobile project tweaks */
+/* ===============================
+   PROJECTS MOBILE
+================================ */
 @media (max-width: 767px) {
-  #projects img {
-    max-width: 100%;
+  #projects .col-md-6 {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
   #projects h5 {
-    font-size: 15px;
+    font-size: 16px;
+    text-align: center;
   }
 
-  #projects p {
-    font-size: 12px;
+  #projects p,
+  #projects span {
+    text-align: center;
   }
+}
+
+/* Short Courses Capstone text */
+.short-course-text {
+  font-size: 13px;
 }
 
 /* ===============================
@@ -200,7 +222,6 @@ section {
   margin: 0 auto;
 }
 
-/* Fix dark logos */
 .invert {
   filter: invert(1);
 }
