@@ -1,11 +1,17 @@
 /* ===============================
-   GLOBAL
+   GLOBAL RESET
 ================================ */
-body {
-  font-family: 'IBM Plex Mono', monospace;
-  padding-top: 70px;
+* {
+  box-sizing: border-box;
 }
 
+body {
+  margin: 0; /* ✅ removes default white gap */
+  font-family: 'IBM Plex Mono', monospace;
+  background-color: #080808; /* prevents white flash */
+}
+
+/* Offset anchor scroll for fixed navbar */
 section {
   scroll-margin-top: 80px;
 }
@@ -28,13 +34,14 @@ section {
 }
 
 /* ===============================
-   LANDING
+   LANDING SECTION (FIXED)
 ================================ */
 #landing {
   min-height: 100vh;
   background-color: #080808;
   display: flex;
   align-items: center;
+  padding-top: 80px; /* ✅ navbar offset moved HERE */
 }
 
 #landing h1,
@@ -46,6 +53,7 @@ section {
 #landing p {
   opacity: 0.9;
 }
+
 
 /* ===============================
    LANDING IMAGE (FIXED)
