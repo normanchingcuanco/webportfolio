@@ -1,18 +1,50 @@
-/* Landing Section */
+/* ===============================
+   GLOBAL STYLES
+================================ */
+body {
+  font-family: 'IBM Plex Mono', monospace;
+  padding-top: 70px; /* offset for fixed navbar */
+}
 
+/* Prevent navbar overlap when scrolling */
+section {
+  scroll-margin-top: 80px;
+}
+
+/* ===============================
+   NAVBAR
+================================ */
+.navbar-brand {
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+}
+
+.navbar-nav .nav-link {
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0.01em;
+  color: rgba(156, 156, 156, 1);
+  padding-left: 18px;
+  padding-right: 18px;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ffffff;
+}
+
+/* ===============================
+   LANDING SECTION
+================================ */
 #landing {
   background-color: #080808;
-  min-height: 700px;
+  min-height: 100vh;
   display: flex;
   align-items: center;
 }
 
-/* Max width */
-#landing .container {
-  max-width: 1280px;
-}
-
-/* Dark background */
+/* Text colors */
 #landing h1,
 #landing h2,
 #landing p {
@@ -27,126 +59,73 @@
   opacity: 0.9;
 }
 
-/* Navbar Links */
-
-.navbar-nav .nav-link {
-  font-family: 'IBM Plex Mono', monospace;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1;
-  letter-spacing: 0.01em;
-
-  color: rgba(156, 156, 156, 1);
-
-  padding-left: 18px;
-  padding-right: 18px;
-}
-
-/* Hover effect */
-.navbar-nav .nav-link:hover {
-  color: #ffffff;
-}
-
-.navbar-brand {
-  font-family: 'IBM Plex Mono', monospace;
-  font-weight: 500;
-  font-size: 14px;
-  letter-spacing: 0.04em;
-  color: #ffffff;
-}
-
-/* Landing Image */
-
+/* ===============================
+   LANDING IMAGE
+================================ */
 .image-wrapper {
   position: relative;
-  width: 416px;
-  height: 623px;
-  margin: 0 auto; /* ✅ centers inside column */
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
 }
 
 .landing-image {
-  position: absolute;
-
-  width: 416px;
-  height: 416px;
-  left: -33px;
-
+  width: 100%;
+  max-width: 360px;
+  aspect-ratio: 1 / 1;
   border-radius: 50%;
   object-fit: cover;
-
-  top: 50%;
-  transform: translateY(-50%); /* 🔥 THIS centers it vertically */
-
+  position: relative;
   z-index: 2;
 }
 
-
-/* Ellipse Background */
+/* Ellipse background */
 .ellipse {
   position: absolute;
-
-  width: 350px;
-  height: 350px;
-  border-radius: 50%;
-
+  width: 300px;
+  height: 300px;
   background: rgba(255, 255, 255, 0.08);
-
+  border-radius: 50%;
   top: 50%;
-  left: 20px;
-  transform: translateY(-50%);
-
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 1;
 }
 
-/* Responsiveness Adjustment */
-
+/* ===============================
+   MOBILE OPTIMIZATION
+================================ */
 @media (max-width: 767px) {
-  .image-wrapper {
-    width: 260px;
-    height: auto;
-    margin: 0 auto;
+  #landing {
+    padding-top: 120px;
+    text-align: center;
   }
 
   .landing-image {
-    width: 260px;
-    height: 260px;
-    top: 0;
-    left: 0;
+    max-width: 240px;
   }
 
   .ellipse {
     width: 220px;
     height: 220px;
-    top: 40px;
-    left: 20px;
   }
 }
 
-/* Project Section */
-
+/* ===============================
+   PROJECTS SECTION
+================================ */
 #projects {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding: 60px 0;
 }
 
-#projects .row {
-  margin-bottom: 2rem; /* smaller gap between projects */
-}
-
-#projects .row:last-child {
-  margin-bottom: 0;
-}
-
-/* Project Images */
 #projects img {
   width: 100%;
-  max-width: 300px;   /* reduce size */
+  max-width: 300px;
   height: auto;
   border-radius: 8px;
   margin-bottom: 1rem;
 }
 
-/* Project Text */
 #projects h5 {
   font-size: 16px;
   margin-bottom: 0.5rem;
@@ -160,24 +139,21 @@
 
 #projects span {
   font-size: 11px;
-  padding: 3px 8px;
 }
 
-/* Row adjustments for alternating layout */
-#projects .row.align-items-center {
-  gap: 1rem; /* less gap between image and text */
+/* Reduce spacing between project rows */
+#projects .row {
+  margin-bottom: 2rem;
 }
 
-/* Short Courses Capstone Text */
-.short-course-text {
-  font-size: 13px;
+#projects .row:last-child {
+  margin-bottom: 0;
 }
 
 /* Mobile adjustments */
 @media (max-width: 767px) {
   #projects img {
     max-width: 100%;
-    margin-bottom: 0.75rem;
   }
 
   #projects h5 {
@@ -189,18 +165,17 @@
   }
 }
 
-/* Tools Section Icons */
-#tools .tool-icon {
-  width: 80px;
-  height: 80px;
-  object-fit: contain;
-  margin: 0 auto;
-  display: block;
+/* Short Courses text */
+.short-course-text {
+  font-size: 13px;
 }
 
-/* Tools Section */
+/* ===============================
+   TOOLS SECTION
+================================ */
 #tools {
-  background-color: #080808; /* same as landing */
+  background-color: #080808;
+  padding: 80px 0 160px;
 }
 
 #tools h2,
@@ -213,12 +188,30 @@
   opacity: 0.9;
 }
 
-/* Fix dark logos on dark background */
-#tools .invert {
+/* Tool icons */
+.tool-icon {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Fix dark logos */
+.invert {
   filter: invert(1);
 }
 
-/* Tools Section Spacing */
-#tools {
-  padding-bottom: 160px; /* pushes Contact section down */
+/* ===============================
+   CONTACT SECTION
+================================ */
+#contact {
+  padding: 80px 0;
+}
+
+/* ===============================
+   FOOTER
+================================ */
+footer {
+  font-size: 14px;
 }
