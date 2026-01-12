@@ -6,12 +6,12 @@
 }
 
 body {
-  margin: 0; /* ✅ removes default white gap */
+  margin: 0;
   font-family: 'IBM Plex Mono', monospace;
-  background-color: #080808; /* prevents white flash */
+  background-color: #ffffff;
 }
 
-/* Offset anchor scroll for fixed navbar */
+/* Offset anchor scrolling for fixed navbar */
 section {
   scroll-margin-top: 80px;
 }
@@ -34,14 +34,14 @@ section {
 }
 
 /* ===============================
-   LANDING SECTION (FIXED)
+   LANDING SECTION
 ================================ */
 #landing {
   min-height: 100vh;
   background-color: #080808;
   display: flex;
   align-items: center;
-  padding-top: 80px; /* ✅ navbar offset moved HERE */
+  padding-top: 90px; /* offset for fixed navbar */
 }
 
 #landing h1,
@@ -50,25 +50,27 @@ section {
   color: #ffffff;
 }
 
+#landing h2 {
+  opacity: 0.85;
+}
+
 #landing p {
   opacity: 0.9;
 }
 
-
 /* ===============================
-   LANDING IMAGE (FIXED)
+   LANDING IMAGE (LOCKED & RESPONSIVE)
 ================================ */
 .image-wrapper {
   position: relative;
   width: 100%;
-  max-width: 420px;
+  max-width: 360px;
   margin: 0 auto;
 }
 
 .landing-image {
   display: block;
   width: 100%;
-  max-width: 360px;
   aspect-ratio: 1 / 1;
   border-radius: 50%;
   object-fit: cover;
@@ -76,11 +78,11 @@ section {
   z-index: 2;
 }
 
-/* Ellipse */
+/* Ellipse background */
 .ellipse {
   position: absolute;
-  width: 300px;
-  height: 300px;
+  width: 280px;
+  height: 280px;
   background: rgba(255, 255, 255, 0.08);
   border-radius: 50%;
   top: 50%;
@@ -90,7 +92,7 @@ section {
 }
 
 /* ===============================
-   MOBILE FIX
+   MOBILE OPTIMIZATION
 ================================ */
 @media (max-width: 767px) {
   #landing {
@@ -98,30 +100,77 @@ section {
     text-align: center;
   }
 
-  .landing-image {
+  .image-wrapper {
     max-width: 240px;
   }
 
   .ellipse {
-    width: 220px;
-    height: 220px;
+    width: 200px;
+    height: 200px;
   }
 }
 
 /* ===============================
-   PROJECTS
+   PROJECTS SECTION
 ================================ */
 #projects {
   padding: 60px 0;
 }
 
 #projects img {
+  width: 100%;
   max-width: 300px;
+  height: auto;
   border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+#projects h5 {
+  font-size: 16px;
+  margin-bottom: 0.5rem;
+}
+
+#projects p {
+  font-size: 13px;
+  line-height: 1.4;
+  margin-bottom: 0.5rem;
+}
+
+#projects span {
+  font-size: 11px;
+}
+
+/* Reduce spacing between project rows */
+#projects .row {
+  margin-bottom: 2rem;
+}
+
+#projects .row:last-child {
+  margin-bottom: 0;
+}
+
+/* Mobile adjustments */
+@media (max-width: 767px) {
+  #projects img {
+    max-width: 100%;
+  }
+
+  #projects h5 {
+    font-size: 15px;
+  }
+
+  #projects p {
+    font-size: 12px;
+  }
+}
+
+/* Short Courses text */
+.short-course-text {
+  font-size: 13px;
 }
 
 /* ===============================
-   TOOLS
+   TOOLS SECTION
 ================================ */
 #tools {
   background-color: #080808;
@@ -134,23 +183,34 @@ section {
   color: #ffffff;
 }
 
+#tools p {
+  opacity: 0.9;
+}
+
+/* Tool icons */
 .tool-icon {
   width: 80px;
   height: 80px;
   object-fit: contain;
+  display: block;
+  margin: 0 auto;
 }
 
+/* Fix dark logos */
 .invert {
   filter: invert(1);
 }
 
 /* ===============================
-   CONTACT & FOOTER
+   CONTACT SECTION
 ================================ */
 #contact {
   padding: 80px 0;
 }
 
+/* ===============================
+   FOOTER
+================================ */
 footer {
   font-size: 14px;
 }
